@@ -19,9 +19,9 @@ class WakilPialangController extends Controller
             // Mendapatkan kategori berdasarkan slug atau akan gagal jika tidak ditemukan
             $kategori = KategoriWakilPialang::where('slug', $slug)->firstOrFail();
 
-            // Mengambil data Wakil Pialang berdasarkan kategori dan mengurutkan berdasarkan nama
+            // Mengambil data Wakil Pialang berdasarkan kategori dan mengurutkan berdasarkan created_at (terbaru dulu)
             $wakilPialang = WakilPialang::where('category_id', $kategori->id)
-                ->orderBy('nama', 'asc') // Urutkan berdasarkan nama secara ascending
+                ->orderBy('created_at', 'desc') // Urutkan berdasarkan created_at descending (terbaru dulu)
                 ->get();
 
             // Mengirimkan data ke view
