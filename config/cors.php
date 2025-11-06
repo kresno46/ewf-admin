@@ -27,6 +27,7 @@ return [
         'https://kpf-officiall-ld8q.vercel.app',
         'https://ewf-official.vercel.app',
         'http://ewf-dev.equityworld-futures.com',
+        'https://ewf-dev.equityworld-futures.com',
     ],
 
     'allowed_origins_patterns' => [],
