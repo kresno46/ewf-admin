@@ -220,12 +220,12 @@
             </li>
 
             <!-- Nav Item - About -->
-            <!--li class="nav-item {{ Nav::isRoute('galeri.*') }}">
-                <a class="nav-link" href="" style="color: #00000;">
-                    <i class="fa-solid fa-image" style="color: #00000;"></i>
-                    <span style="color: #00000;">{{ __('Galeri') }}</span>
+            <li class="nav-item {{ Nav::isRoute('karier.*') }}">
+                <a class="nav-link" href="{{route('karier.index')}}" style="color: #00000;">
+                    <i class="fa-solid fa-briefcase" style="color: #00000;"></i>
+                    <span style="color: #00000;">{{ __('Karier') }}</span>
                 </a>
-            </li>-->
+            </li>
 
             <!-- Nav Item - About -->
             <!--li class="nav-item {{ Nav::isRoute('file.*') }}">
@@ -394,6 +394,9 @@
     <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- Stack for scripts from child views -->
+    @stack('scripts')
 </body>
 
 </html>

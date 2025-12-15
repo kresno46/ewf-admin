@@ -9,6 +9,7 @@ use App\Http\Controllers\SpaController;
 use App\Http\Controllers\WakilPialangController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KarierController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -45,6 +46,9 @@ Route::prefix('produk/spa')->name('spa.')->group(function () {
     Route::get('/{id}/show', [SpaController::class, 'show'])->name('show');
     Route::delete('/{id}/delete', [SpaController::class, 'destroy'])->name('destroy');
 });
+
+// Karier
+Route::resource('karier', KarierController::class);
 
 // Berita
 Route::prefix('berita')->name('berita.')->group(function () {

@@ -49,6 +49,10 @@ Route::prefix('kategori-wakil-pialang')->group(function () {
 // Wakil Pialang API
 Route::get('/wakil-pialang', [WakilPialangController::class, 'index']);
 
+// Karier API Routes
+Route::get('/karier', [\App\Http\Controllers\Api\KarierController::class, 'index']);
+Route::get('/karier/{slug}', [\App\Http\Controllers\Api\KarierController::class, 'show']);
+
 // Banner API
 Route::get('/banners', [ApiBannerController::class, 'index']);
 Route::get('/banners/{id}', [ApiBannerController::class, 'show']);
