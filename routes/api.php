@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\SpaController;
 use App\Http\Controllers\Api\WakilPialangController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CareerApplicationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,10 @@ Route::get('/wakil-pialang', [WakilPialangController::class, 'index']);
 // Karier API Routes
 Route::get('/karier', [\App\Http\Controllers\Api\KarierController::class, 'index']);
 Route::get('/karier/{slug}', [\App\Http\Controllers\Api\KarierController::class, 'show']);
+Route::post('/karier/apply', [CareerApplicationController::class, 'sendApplication']);
+
+// Career Application (compatibility alias)
+Route::post('/career-application', [CareerApplicationController::class, 'sendApplication']);
 
 // Banner API
 Route::get('/banners', [ApiBannerController::class, 'index']);

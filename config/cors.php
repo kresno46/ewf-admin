@@ -15,7 +15,13 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => [
+        'api/*',
+        'sanctum/csrf-cookie',
+        // Explicit endpoints for career application submissions
+        'api/career-application',
+        'api/karier/apply',
+    ],
 
     'allowed_methods' => ['*'],
 
@@ -31,7 +37,7 @@ return [
     ],
 
     'allowed_origins_patterns' => [],
-
+    
     'allowed_headers' => [
         'Content-Type',
         'X-Requested-With',
@@ -49,6 +55,6 @@ return [
 
     'max_age' => 60 * 60 * 24, // 24 jam
 
-    'supports_credentials' => false,
+    'supports_credentials' => true,
 
 ];
