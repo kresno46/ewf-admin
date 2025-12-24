@@ -1,0 +1,4 @@
+[23-Dec-2025 04:35:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Console\Kernel" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Console/Kernel.php on line 8

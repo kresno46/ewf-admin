@@ -1,0 +1,44 @@
+[23-Dec-2025 10:12:14 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/0001_01_01_000001_create_cache_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/0001_01_01_000001_create_cache_table.php on line 7
+[23-Dec-2025 10:15:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_07_29_140319_add_cta_buttons_to_banners_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_07_29_140319_add_cta_buttons_to_banners_table.php on line 7
+[23-Dec-2025 10:15:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_04_27_052036_create_jfxes_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_04_27_052036_create_jfxes_table.php on line 7
+[23-Dec-2025 10:15:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_04_29_154000_create_profiles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_04_29_154000_create_profiles_table.php on line 7
+[23-Dec-2025 10:15:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_04_28_053826_create_beritas_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_04_28_053826_create_beritas_table.php on line 7
+[23-Dec-2025 10:15:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_07_24_100019_create_banners_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_07_24_100019_create_banners_table.php on line 7
+[23-Dec-2025 10:17:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_12_15_235039_create_kariers_table.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_12_15_235039_create_kariers_table.php on line 8
+[23-Dec-2025 10:18:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_12_16_001235_update_kariers_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_12_16_001235_update_kariers_table.php on line 7
+[23-Dec-2025 13:29:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_09_10_052455_modify_beritas_table_image_column.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_09_10_052455_modify_beritas_table_image_column.php on line 7
+[23-Dec-2025 20:29:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/0001_01_01_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/0001_01_01_000000_create_users_table.php on line 7
+[24-Dec-2025 08:47:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_04_25_062529_create_wakil_pialangs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/database/migrations/2025_04_25_062529_create_wakil_pialangs_table.php on line 7

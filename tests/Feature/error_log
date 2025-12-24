@@ -1,0 +1,4 @@
+[23-Dec-2025 10:21:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/tests/Feature/ExampleTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/tests/Feature/ExampleTest.php on line 8

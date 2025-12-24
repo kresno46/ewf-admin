@@ -1,0 +1,36 @@
+[23-Dec-2025 06:34:42 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/Jfx.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/Jfx.php on line 9
+[23-Dec-2025 08:20:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/Banner.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/Banner.php on line 7
+[23-Dec-2025 08:22:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/Berita.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/Berita.php on line 9
+[23-Dec-2025 08:27:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/Karier.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/Karier.php on line 9
+[23-Dec-2025 10:10:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/KategoriWakilPialang.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/KategoriWakilPialang.php on line 9
+[23-Dec-2025 10:17:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/Profile.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/Profile.php on line 8
+[23-Dec-2025 11:46:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Auth\User" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/User.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/User.php on line 10
+[23-Dec-2025 13:54:13 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/Spa.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/Spa.php on line 9
+[23-Dec-2025 16:53:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Model" not found in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/WakilPialang.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/app/Models/WakilPialang.php on line 8

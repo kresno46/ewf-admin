@@ -1,0 +1,44 @@
+[23-Dec-2025 00:51:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/hashing.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/hashing.php on line 32
+[23-Dec-2025 00:52:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/cache.php on line 21
+[23-Dec-2025 00:53:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/database.php on line 18
+[23-Dec-2025 00:54:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/mail.php on line 16
+[23-Dec-2025 02:42:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/logging.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/logging.php on line 20
+[23-Dec-2025 04:35:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/filesystems.php on line 16
+[23-Dec-2025 04:38:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/view.php on line 17
+[23-Dec-2025 08:25:42 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/queue.php on line 16
+[23-Dec-2025 12:05:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/broadcasting.php on line 18
+[23-Dec-2025 15:23:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/app.php on line 16
+[23-Dec-2025 21:04:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/newa2711/public_html/ewf-admin.newsmaker.id/config/services.php on line 18
