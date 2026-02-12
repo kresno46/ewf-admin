@@ -3,40 +3,56 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Profile;
+use App\Models\WebsiteProfile;
 
 class ProfileWebsiteController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        $profile = Profile::first(); // hanya satu data yang diambil
+        $profile = WebsiteProfile::first();
         return view('profile-website.index', compact('profile'));
     }
 
     public function storeOrUpdate(Request $request)
     {
         $request->validate([
-            'content' => 'required|string',
+            'website_name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'address' => 'nullable|string',
+            'map_link' => 'nullable|url|max:1000',
+            'complaint_link' => 'nullable|url|max:1000',
+            'phone' => 'nullable|string|max:50',
+            'fax' => 'nullable|string|max:50',
+            'email' => 'nullable|email|max:255',
         ]);
 
-        $profile = Profile::first();
+        WebsiteProfile::updateOrCreate(
+            ['id' => optional(WebsiteProfile::first())->id ?? 1],
+            $request->only([
+                'website_name',
+                'description',
+                'address',
+                'map_link',
+                'complaint_link',
+                'phone',
+                'fax',
+                'email',
+            ])
+        );
 
-        if ($profile) {
-            $profile->update(['content' => $request->content]);
-            $message = 'Profil berhasil diperbarui.';
-        } else {
-            Profile::create(['content' => $request->content]);
-            $message = 'Profil berhasil ditambahkan.';
-        }
-
-        return redirect()->back()->with('success', $message);
+        return redirect()->back()->with('success', 'Pengaturan website berhasil disimpan.');
     }
 
     public function destroy($id)
     {
-        $profile = Profile::findOrFail($id);
+        $profile = WebsiteProfile::findOrFail($id);
         $profile->delete();
 
-        return redirect()->back()->with('success', 'Konten profil berhasil dihapus.');
+        return redirect()->back()->with('success', 'Pengaturan website berhasil dihapus.');
     }
 }

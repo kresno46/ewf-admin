@@ -195,13 +195,12 @@
                 {{ __('Pengaturan') }}
             </div>
 
-            <!-- Nav Item - Profile -->
-            <!--li class="nav-item {{ Nav::isRoute('profileWeb.*') }}">
-                <a class="nav-link" href="{{route('profileWeb.index')}}" style="color: #00000;">
-                    <i class="fas fa-fw fa-user" style="color: #00000;"></i>
-                    <span style="color: #00000;">{{ __('Profile') }}</span>
+            <li class="nav-item {{ Nav::isRoute('profileWeb.*') }}">
+                <a class="nav-link" href="{{ route('profileWeb.index') }}" style="color: #00000;">
+                    <i class="fas fa-fw fa-globe" style="color: #00000;"></i>
+                    <span style="color: #00000;">{{ __('Pengaturan Website') }}</span>
                 </a>
-            </li>-->
+            </li>
 
             <!-- Nav Item - About -->
             <li class="nav-item {{ Nav::isRoute('kategori-wakil.*') }}">

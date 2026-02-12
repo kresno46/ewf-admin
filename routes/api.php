@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\BannerController as ApiBannerController;
 use App\Http\Controllers\Api\BeritaController;
 use App\Http\Controllers\Api\JfxController;
 use App\Http\Controllers\Api\KategoriWakilPialangController;
+use App\Http\Controllers\Api\ProfileWebsiteController;
 use App\Http\Controllers\Api\SpaController;
 use App\Http\Controllers\Api\WakilPialangController;
 use Illuminate\Http\Request;
@@ -57,6 +58,9 @@ Route::post('/karier/apply', [CareerApplicationController::class, 'sendApplicati
 
 // Career Application (compatibility alias)
 Route::post('/career-application', [CareerApplicationController::class, 'sendApplication']);
+
+// Website Profile API Route
+Route::get('/website-profile', [ProfileWebsiteController::class, 'index']);
 
 // Banner API
 Route::get('/banners', [ApiBannerController::class, 'index']);
