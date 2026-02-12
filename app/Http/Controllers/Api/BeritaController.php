@@ -13,6 +13,11 @@ class BeritaController extends Controller
     {
         $berita = Berita::where('status', 'published')->latest()->get();
 
+        $berita->transform(function ($item) {
+            $item->image_url = $item->image ? asset('img/berita/' . $item->image) : null;
+            return $item;
+        });
+
         return response()->json($berita, 200);
     }
 
@@ -24,6 +29,8 @@ class BeritaController extends Controller
         if (!$berita) {
             return response()->json(['message' => 'Berita tidak ditemukan'], 404);
         }
+
+        $berita->image_url = $berita->image ? asset('img/berita/' . $berita->image) : null;
 
         return response()->json($berita, 200);
     }
