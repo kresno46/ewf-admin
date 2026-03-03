@@ -50,7 +50,7 @@
 
                     <div class="form-group">
                         <label for="deskripsi">Responsibilities <span class="text-danger">*</span></label>
-                        <textarea class="form-control @error('deskripsi') is-invalid @enderror" 
+                        <textarea class="form-control tinymce-editor @error('deskripsi') is-invalid @enderror" 
                                  id="deskripsi" name="deskripsi" rows="10" 
                                  placeholder="Tuliskan tanggung jawab pekerjaan" required>{{ old('deskripsi') }}</textarea>
                         @error('deskripsi')
@@ -60,7 +60,7 @@
 
                     <div class="form-group">
                         <label for="persyaratan">Qualification<span class="text-danger">*</span></label>
-                        <textarea class="form-control @error('persyaratan') is-invalid @enderror" 
+                        <textarea class="form-control tinymce-editor @error('persyaratan') is-invalid @enderror" 
                                  id="persyaratan" name="persyaratan" rows="10" 
                                  placeholder="Tuliskan kualifikasi yang dibutuhkan" required>{{ old('persyaratan') }}</textarea>
                         @error('persyaratan')
@@ -96,55 +96,69 @@
 @endpush
 
 @push('scripts')
-    <script src="https://cdn.jsdelivr.net/npm/tinymce@5.10.0/tinymce.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/rijrac2uxn06a1q296snq7j1fi420fd29r3lc1o12yzq6fwv/tinymce/8/tinymce.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Inisialisasi TinyMCE untuk deskripsi
             tinymce.init({
-                selector: '#deskripsi',
-                height: 300,
-                menubar: false,
-                plugins: [
-                    'advlist autolink lists link image charmap print preview anchor',
-                    'searchreplace visualblocks code fullscreen',
-                    'insertdatetime media table paste code help wordcount'
-                ],
-                toolbar: 'undo redo | formatselect | ' +
-                    'bold italic backcolor | alignleft aligncenter ' +
-                    'alignright alignjustify | bullist numlist outdent indent | ' +
-                    'removeformat | help',
-                content_style: 'body { font-family: "Nunito", sans-serif; font-size: 14px }',
-                skin: 'oxide',
-                content_css: 'default',
-                setup: function(editor) {
-                    editor.on('change', function() {
-                        editor.save();
-                    });
-                }
-            });
+                selector: '.tinymce-editor',
+                plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+                toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+                content_style: 'img{max-width:100%;height:auto;}',
+                document_base_url: "{{ config('app.url') }}/",
+                relative_urls: false,
+                remove_script_host: false,
+                automatic_uploads: true,
+                image_uploadtab: true,
+                file_picker_types: 'image',
+                image_class_list: [{
+                    title: 'Responsive',
+                    value: 'img-fluid'
+                }],
+                setup: (editor) => {
+                    const sync = () => editor.save();
+                    editor.on('change input undo redo', sync);
+                },
+                images_upload_handler: (blobInfo, progress) => new Promise((resolve, reject) => {
+                    const xhr = new XMLHttpRequest();
 
-            // Inisialisasi TinyMCE untuk persyaratan
-            tinymce.init({
-                selector: '#persyaratan',
-                height: 300,
-                menubar: false,
-                plugins: [
-                    'advlist autolink lists link image charmap print preview anchor',
-                    'searchreplace visualblocks code fullscreen',
-                    'insertdatetime media table paste code help wordcount'
-                ],
-                toolbar: 'undo redo | formatselect | ' +
-                    'bold italic backcolor | alignleft aligncenter ' +
-                    'alignright alignjustify | bullist numlist outdent indent | ' +
-                    'removeformat | help',
-                content_style: 'body { font-family: "Nunito", sans-serif; font-size: 14px }',
-                skin: 'oxide',
-                content_css: 'default',
-                setup: function(editor) {
-                    editor.on('change', function() {
-                        editor.save();
-                    });
-                }
+                    xhr.open('POST', '{{ route('tinymce.upload') }}');
+                    xhr.setRequestHeader('X-CSRF-TOKEN', '{{ csrf_token() }}');
+                    xhr.withCredentials = true;
+
+                    xhr.upload.onprogress = (e) => {
+                        progress(e.loaded / e.total * 100);
+                    };
+
+                    xhr.onload = () => {
+                        if (xhr.status !== 200) {
+                            reject('HTTP Error: ' + xhr.status);
+                            return;
+                        }
+
+                        let json;
+                        try {
+                            json = JSON.parse(xhr.responseText);
+                        } catch (e) {
+                            reject('Invalid JSON: ' + xhr.responseText);
+                            return;
+                        }
+
+                        if (!json || typeof json.location !== 'string') {
+                            reject('Invalid response: ' + xhr.responseText);
+                            return;
+                        }
+
+                        resolve(json.location);
+                    };
+
+                    xhr.onerror = () => {
+                        reject('Image upload failed due to a network error.');
+                    };
+
+                    const formData = new FormData();
+                    formData.append('file', blobInfo.blob(), blobInfo.filename());
+                    xhr.send(formData);
+                }),
             });
 
             // Validasi form
@@ -171,3 +185,4 @@
         });
     </script>
 @endpush
+
